@@ -1,0 +1,72 @@
+.bd-placeholder-img {
+  text-anchor: middle;
+  -webkit-user-select: none;
+  user-select: none;
+  font-size: 1.125rem;
+}
+
+@media (width >= 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  width: 100%;
+  height: 3rem;
+  background-color: #0000001a;
+  border: 1px solid #00000026;
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em #0000001a, inset 0 .125em .5em #00000026;
+}
+
+.b-example-vr {
+  width: 1.5rem;
+  height: 100vh;
+  flex-shrink: 0;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  z-index: 2;
+  height: 2.75rem;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  flex-wrap: nowrap;
+  margin-top: -1px;
+  padding-bottom: 1rem;
+  display: flex;
+  overflow-x: auto;
+}
+
+.btn-bd-primary {
+  --bd-violet-bg: #712cf9;
+  --bd-violet-rgb: 112.521, 44.0622, 249.438;
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bd-violet-bg);
+  --bs-btn-border-color: var(--bd-violet-bg);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #6528e0;
+  --bs-btn-hover-border-color: #6528e0;
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #5a23c8;
+  --bs-btn-active-border-color: #5a23c8;
+}
+
+.bd-mode-toggle {
+  z-index: 1500;
+}
+
+/*# sourceMappingURL=index.07fedde6.css.map */
