@@ -1,27 +1,87 @@
-// Check if the user has a preferred color scheme (light/dark) set in their browser
-const prefersDarkMode =
-  window.matchMedia &&
-  window.matchMedia("(prefers-color-scheme: dark)").matches;
+/*!
+ * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
+ * Copyright 2011-2023 The Bootstrap Authors
+ * Licensed under the Creative Commons Attribution 3.0 Unported License.
+ */
 
-// Apply the appropriate theme based on user preference
-function applyTheme(darkMode) {
-  const body = document.querySelector("body");
-  if (darkMode) {
-    body.classList.add("dark-mode");
-  } else {
-    body.classList.remove("dark-mode");
-  }
-}
+(() => {
+  "use strict";
 
-// Toggle the dark mode
-function toggleDarkMode() {
-  const body = document.querySelector("body");
-  body.classList.toggle("dark-mode");
-}
+  const storedTheme = localStorage.getItem("theme");
 
-// Initialize the theme based on user preference or default to light mode
-applyTheme(prefersDarkMode);
+  const getPreferredTheme = () => {
+    if (storedTheme) {
+      return storedTheme;
+    }
 
-// Add event listener to the dark mode toggle button
-const darkModeToggle = document.getElementById("darkModeToggle");
-darkModeToggle.addEventListener("click", toggleDarkMode);
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  };
+
+  const setTheme = function (theme) {
+    if (
+      theme === "auto" &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      document.documentElement.setAttribute("data-bs-theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-bs-theme", theme);
+    }
+  };
+
+  setTheme(getPreferredTheme());
+
+  const showActiveTheme = (theme, focus = false) => {
+    const themeSwitcher = document.querySelector("#bd-theme");
+
+    if (!themeSwitcher) {
+      return;
+    }
+
+    const themeSwitcherText = document.querySelector("#bd-theme-text");
+    const activeThemeIcon = document.querySelector(".theme-icon-active use");
+    const btnToActive = document.querySelector(
+      `[data-bs-theme-value="${theme}"]`
+    );
+    const svgOfActiveBtn = btnToActive
+      .querySelector("svg use")
+      .getAttribute("href");
+
+    document.querySelectorAll("[data-bs-theme-value]").forEach((element) => {
+      element.classList.remove("active");
+      element.setAttribute("aria-pressed", "false");
+    });
+
+    btnToActive.classList.add("active");
+    btnToActive.setAttribute("aria-pressed", "true");
+    activeThemeIcon.setAttribute("href", svgOfActiveBtn);
+    const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`;
+    themeSwitcher.setAttribute("aria-label", themeSwitcherLabel);
+
+    if (focus) {
+      themeSwitcher.focus();
+    }
+  };
+
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", () => {
+      if (storedTheme !== "light" || storedTheme !== "dark") {
+        setTheme(getPreferredTheme());
+      }
+    });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    showActiveTheme(getPreferredTheme());
+
+    document.querySelectorAll("[data-bs-theme-value]").forEach((toggle) => {
+      toggle.addEventListener("click", () => {
+        const theme = toggle.getAttribute("data-bs-theme-value");
+        localStorage.setItem("theme", theme);
+        setTheme(theme);
+        showActiveTheme(theme, true);
+      });
+    });
+  });
+})();
