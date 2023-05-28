@@ -1,6 +1,6 @@
 * {
 	font-family: 'Arvo', serif;
-	text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+	text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 body {
   background-color: #15161b !important;
@@ -12,8 +12,8 @@ body {
 }
 
 .navbar {
-	background-color: rgba(21, 22, 27, 0.8); 
-	backdrop-filter: blur(10px);
+	background-color: rgba(21, 22, 27, 0.6); 
+	backdrop-filter: blur(5px);
 }
 .navbar a {
 	color: white;
@@ -46,18 +46,84 @@ main .lead {
 
 main .custom-button {
 	font-family: 'Courier New', Courier, monospace;
-	background-color: rgba(0, 0, 0, 0.5); /* Dark color with low opacity */
-	color: #fff; /* Text color */
-	opacity: 0.7; /* Opacity value */
-	display: block; /* Make the button a block element */
-	width: fit-content; /* Adjust the width based on content */
-	margin: 0 auto; /* Center the button horizontally */
-	text-align: center; /* Center the text within the button */
-	padding: 10px 20px; /* Adjust padding as needed */
-	border: none; /* Remove border */
-	text-decoration: none; /* Remove underline */ 
-	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.3); 
+	color: #fff;
+	display: block;
+	width: fit-content;
+	margin: 0 auto;
+	text-align: center; 
+	padding: 10px 20px;
+	border: 2px solid white;
+	text-decoration: none;
+	border-radius: 25px;
 }
+
+main .custom-button:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #0d7697;
+	border: 2px solid #0d7697;
+}
+
+.content-title h1 {
+	font-size: 30px;
+	color: white;
+	text-align: center;
+}
+
+//PLANETS
+
+.planets {
+  width: 250px; /* Set a fixed width */
+  height: 250px; /* Set a fixed height */
+  border-radius: 10px;
+  overflow: hidden; /* Hide content that overflows */
+  //background-color: rgba(250, 235, 215, 0.307);
+  margin: 10px 10px;
+  box-sizing: border-box;
+  transition: box-shadow 0.2s ease-in-out;
+  border: 1px solid #ffffff;
+}
+
+.planets:hover {
+  box-shadow: 0 0px 8px rgb(255, 255, 255);
+  //border: 1px solid #005570;
+}
+
+.informations {
+  position: relative;
+  height: 100%;
+  padding: 0 10px;
+	background-color: #00000031;
+	padding-left: 15px;
+}
+
+.planet-name a {
+  font-weight: 700;
+  padding-top: 5px;
+  text-decoration: none;
+  color: #a8593c;
+  max-width: 100%;
+  font-size: 20px;
+  overflow: hidden; /* Hide any overflow */
+  text-overflow: ellipsis; /* Show ... when text overflows */
+  white-space: nowrap; /* Prevent line breaks */
+  display: block; /* Apply text-overflow property correctly */
+}
+
+.planet-name a:hover {
+  color: #6251a4;
+}
+
+.price a {
+  color: #4c4848;
+  text-decoration: none;
+}
+
+.planets img {
+  width: 100%;
+}
+
+
 
 .footer {
 	font-size: 12px;
