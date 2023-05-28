@@ -34,21 +34,22 @@ const planets = [
 // Function to generate HTML code for a planet
 function generatePlanetHTML(planet) {
   return `
-      <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-        <div class="planets">
-          <a href="landing-page.html?planet=${planet.name.toLowerCase()}">
-            <img src="${planet.imageSrc}" alt="${planet.name} Logo" />
-          </a>
-          <div class="informations">
-            <h3 class="planet-name"><a href="landing-page.html?planet">${
-              planet.name
-            }</a></h3>
-            <p class="price"><a href="landing-page.html?planet">${
-              planet.price
-            }</a></p>
-          </div>
-        </div>
-      </div>
+  <div class="content-planet col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-center">
+  <div class="planets">
+    <a href="landing-page.html?planet=${planet.name.toLowerCase()}">
+      <img src="${planet.imageSrc}" alt="${planet.name} Logo" />
+    </a>
+    <div class="informations">
+      <h3 class="planet-name">
+        <a href="landing-page.html?planet">${planet.name}</a>
+      </h3>
+      <p class="price">
+        <a href="landing-page.html?planet">${planet.price}</a>
+      </p>
+    </div>
+  </div>
+</div>
+
     `;
 }
 

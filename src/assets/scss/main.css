@@ -21,7 +21,8 @@ body {
 }
 
 .navbar a {
-  color: white;
+  color: rgb(107, 193, 221);
+  font-size: 15px;
 }
 
 main {
