@@ -8,17 +8,18 @@
     <title>Wormhole Express</title>
 
     <link rel="stylesheet" href="./assets/scss/main.css" />
+    
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#" style="font-style: italic;">
           <img
             src="./assets/pictures/spaceship.png"
             alt="Wormhole Express Logo"
             class="logo"
           />
-          Wormhole Express</a
+          WORMHOLE EXPRESS</a
         >
         <button
           class="navbar-toggler"
@@ -75,79 +76,14 @@
     </main>
     <div class="container">
 
-        <div class="content-title mt-5">
+        <div class="content-title mt-5">              
             <h1>Let your dreams transcend the boundaries of the universe!</h1>
         </div>
-
-        <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <div class="planets">
-                <a href="#">
-                    <img src="./assets/pictures/planets/earth_moon.png" alt="Logo" />
-                </a>
-                <div class="informations">
-                    <h3 class="planet-name"><a href="#">Moon</a></h3>
-                    <p class="price"><a href="#">₱50,000</a></p>
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <div class="planets">
-                <a href="#">
-                    <img src="./assets/pictures/planets/earth.png" alt="Logo" />
-                </a>
-                <div class="informations">
-                    <h3 class="planet-name"><a href="#">Earth</a></h3>
-                    <p class="price"><a href="#">₱3,000</a></p>
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <div class="planets">
-                <a href="#">
-                    <img src="./assets/pictures/planets/jupiter.png" alt="Logo" />
-                </a>
-                <div class="informations">
-                    <h3 class="planet-name"><a href="#">Jupiter</a></h3>
-                    <p class="price"><a href="#">₱200,000</a></p>
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <div class="planets">
-                <a href="#">
-                    <img src="./assets/pictures/planets/mars.png" alt="Logo" />
-                </a>
-                <div class="informations">
-                    <h3 class="planet-name"><a href="#">Mars</a></h3>
-                    <p class="price"><a href="#">₱120,000</a></p>
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <div class="planets">
-                <a href="#">
-                    <img src="./assets/pictures/planets/mercury.png" alt="Logo" />
-                </a>
-                <div class="informations">
-                    <h3 class="planet-name"><a href="#">Mercury</a></h3>
-                    <p class="price"><a href="#">₱70,000</a></p>
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <div class="planets">
-                <a href="#">
-                    <img src="./assets/pictures/planets/venus.png" alt="Logo" />
-                </a>
-                <div class="informations">
-                    <h3 class="planet-name"><a href="#">Venus</a></h3>
-                    <p class="price"><a href="#">₱80,000</a></p>
-                </div>
-                </div>
-            </div>
-            
+        <div class="row justify-content-center" id="planetsContainer">
+            <!-- The generated planets will be inserted here -->
         </div>
+
+        
     </div>
 
     <footer class="footer mt-5 pt-4">
@@ -183,6 +119,8 @@
         </div>
       </div>
     </footer>
+    <script src="./assets/js/display_planets.js" type="module"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
   </body>
 </html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Planet Information</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/scss/landing_style.css" />
+    <link rel="stylesheet" href="./assets/scss/main.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="font-style: italic;">
+            <img
+              src="./assets/pictures/spaceship.png"
+              alt="Wormhole Express Logo"
+              class="logo"
+            />
+            WORMHOLE EXPRESS</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Explore</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Gallery</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div class="card container">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="" class="card-img" id="planetImage" alt="Planet Image" />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h1 id="planetName"></h1>
+            <div class="planet-info">
+              <p><strong>Price:</strong> <span id="planetPrice"></span></p>
+              <p>
+                <strong>Distance:</strong> <span id="planetDistance"></span>
+              </p>
+              <p>
+                <strong>Travel Time:</strong>
+                <span id="planetTravelTime"></span>
+              </p>
+              <p><span id="planetFunFact"></span></p>
+              <p id="planetDescription"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer mt-5 pt-4">
+        <hr style="color: white;">
+      <div class="container text-light">
+        <div class="row">
+          <div class="col-md-6">
+            <h6>About Us</h6>
+            <p>
+              "Embark on limitless adventures with Wormhole Express, the
+              interstellar transportation company propelling you to the farthest
+              reaches of the universe at lightning speed, courtesy of our
+              state-of-the-art wormhole technology."
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h6>Contact Us</h6>
+            <ul class="list-unstyled">
+              <li>123 Interstellar Avenue, Space City, Galaxy XZ-789</li>
+              <li>Phone: +1-555-123-4567</li>
+              <li>Email: info@wormholeexpress.com</li>
+
+          </div>
+          <div class="col-md-3">
+            <h6>Follow Us</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

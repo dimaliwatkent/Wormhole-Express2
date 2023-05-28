@@ -1,0 +1,24 @@
+body {
+	background-image: url("../../assets/pictures/background-galaxy.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.card {
+    margin-top: 100px;
+    background-color: rgba(21, 22, 27, 0.6) !important; 
+	backdrop-filter: blur(5px);
+    font-size: 18px;
+    color: white;
+}
+
+#planetName {
+    font-size: 70px;
+
+}
+
+
+
+@import "~bootstrap/scss/bootstrap";

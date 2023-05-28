@@ -1,30 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-* {
-  font-family: "Arvo", serif;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
-}
-
 body {
-  background-color: #15161b !important;
-}
-
-.logo {
-  height: 40px;
-  margin-right: 20px;
-}
-
-.navbar {
-  background-color: rgba(21, 22, 27, 0.6);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-}
-
-.navbar a {
-  color: white;
-}
-
-main {
   background-image: url("../../assets/pictures/background-galaxy.png");
   background-size: cover;
   background-position: center;
@@ -32,103 +7,17 @@ main {
   background-attachment: fixed;
 }
 
-.home-content {
-  padding-top: 150px;
-}
-
-main h1, main .h1 {
+.card {
+  margin-top: 100px;
+  background-color: rgba(21, 22, 27, 0.6) !important;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  font-size: 18px;
   color: white;
-  font-size: 40px;
-  text-align: center;
-  margin-bottom: 20px;
 }
 
-main .lead {
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  justify-content: center;
-}
-
-main .custom-button {
-  font-family: "Courier New", Courier, monospace;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: #fff;
-  display: block;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  text-align: center;
-  padding: 10px 20px;
-  border: 2px solid white;
-  text-decoration: none;
-  border-radius: 25px;
-}
-
-main .custom-button:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #0d7697;
-  border: 2px solid #0d7697;
-}
-
-.content-title h1, .content-title .h1 {
-  font-size: 30px;
-  color: white;
-  text-align: center;
-}
-
-.planets {
-  width: 250px; /* Set a fixed width */
-  height: 250px; /* Set a fixed height */
-  border-radius: 10px;
-  overflow: hidden; /* Hide content that overflows */
-  margin: 10px 10px;
-  box-sizing: border-box;
-  transition: box-shadow 0.2s ease-in-out;
-  border: 1px solid #ffffff;
-}
-
-.planets:hover {
-  box-shadow: 0 0px 8px rgb(255, 255, 255);
-}
-
-.informations {
-  position: relative;
-  height: 100%;
-  padding: 0 10px;
-  background-color: rgba(0, 0, 0, 0.1921568627);
-  padding-left: 15px;
-}
-
-.planet-name a {
-  font-weight: 700;
-  padding-top: 5px;
-  text-decoration: none;
-  color: #a8593c;
-  max-width: 100%;
-  font-size: 20px;
-  overflow: hidden; /* Hide any overflow */
-  text-overflow: ellipsis; /* Show ... when text overflows */
-  white-space: nowrap; /* Prevent line breaks */
-  display: block; /* Apply text-overflow property correctly */
-}
-
-.planet-name a:hover {
-  color: #6251a4;
-}
-
-.price a {
-  color: #4c4848;
-  text-decoration: none;
-}
-
-.planets img {
-  width: 100%;
-}
-
-.footer {
-  font-size: 12px;
-  background-color: #15161b;
+#planetName {
+  font-size: 70px;
 }
 
 /*!
