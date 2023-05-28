@@ -26,9 +26,12 @@ main {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-.home-content {
-	padding-top: 150px;
-	// height: 500px;
+
+.home-content2 {
+	background-color: rgba(21, 22, 27, 0.6) !important; 
+	backdrop-filter: blur(5px);
+	padding: 50px; 
+	border-radius: 25px;
 }
 
 main h1 {

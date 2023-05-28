@@ -16,6 +16,11 @@ body {
   color: white;
 }
 
+#img-container {
+  display: flex;
+  align-items: center;
+}
+
 #planetName {
   font-size: 70px;
 }
